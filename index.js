@@ -45,7 +45,7 @@ function getEvens(arr){
   if (evens.length>0){
     return evens;
   } else{
-    return `I can't even.`;
+    return `I can't even`;
   }
 }
 function getOdds(arr){
@@ -57,16 +57,16 @@ function getOdds(arr){
   if (odds.length>0){
     return odds;
   } else{
-    return `That's odd.`;
+    return `That's odd`;
   }
 }
 
 
-alert(getLength(luckyNumbersArray));
-alert(getSum(luckyNumbersArray));
-alert(getMean(luckyNumbersArray));
-alert(getMin(luckyNumbersArray));
-alert(getMax(luckyNumbersArray));
-alert(getRange(luckyNumbersArray));
-alert(getEvens(luckyNumbersArray));
-alert(getOdds(luckyNumbersArray));
+alert(`This array is ${getLength(luckyNumbersArray)} numbers long`);
+alert(`The sum of this array is ${getSum(luckyNumbersArray)}.`);
+alert(`The mean of this array is ${getMean(luckyNumbersArray)}.`);
+alert(`The smallest number in this array is ${getMin(luckyNumbersArray)}.`);
+alert(`The biggest number in this array is ${getMax(luckyNumbersArray)}.`);
+alert(`The range of this array is ${getRange(luckyNumbersArray)}.`);
+alert(`The even number(s) in this array are... ${getEvens(luckyNumbersArray)}.`);
+alert(`The odd number(s) in this array are... ${getOdds(luckyNumbersArray)}.`);
