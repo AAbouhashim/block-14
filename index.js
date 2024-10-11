@@ -1,8 +1,8 @@
+//Prompt the user to enter 3 numbers, but provides defaults
 let luckyNumbers =prompt(`Enter 3 lucky numbers seperated by commas.`,`1,7,11`)
 
+//Creates an array from the string (User prompt)
 let luckyNumbersArray = luckyNumbers.split(',');
-
-console.log(luckyNumbersArray);
 
 function getLength(arr) {
   return arr.length;
@@ -19,7 +19,7 @@ function getMean(arr){
 }
 function getMin(arr){
   let min= Number(arr[0]);
-  for (let i=1; i<arr.length; i++)
+  for (let i=1; i<arr.length; i++) //This is f*cking cool, variable i keeps count of where in the array we are
     if (Number(arr[i])<min){
       min=Number(arr[i]);
     }
@@ -34,12 +34,12 @@ function getMax(arr){
   return max;
 }
 function getRange(arr){
-  return (getMax(luckyNumbersArray)-getMin(luckyNumbersArray));
+  return (getMax(arr)-getMin(arr));
 }
 function getEvens(arr){
   let evens=[];
   for (let i=0; i<arr.length; i++)
-    if(Number(arr[i]%2 ===0)){
+    if(Number(arr[i])%2 ===0){
       evens.push(Number(arr[i]));
     }
   if (evens.length>0){
@@ -62,6 +62,7 @@ function getOdds(arr){
 }
 
 
+// Alerts 
 alert(`This array is ${getLength(luckyNumbersArray)} numbers long`);
 alert(`The sum of this array is ${getSum(luckyNumbersArray)}.`);
 alert(`The mean of this array is ${getMean(luckyNumbersArray)}.`);
